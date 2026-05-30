@@ -41,4 +41,3 @@ permalink: /
 ## 🌸 ติดต่อ
 
 - GitHub: [github.com/sximi](https://github.com/sximi)
-- Email: jantarastemtong@gmail.com
