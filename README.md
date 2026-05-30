@@ -20,11 +20,11 @@ permalink: /
 
 ## 🌸 ความสนใจ
 
-- 🎀 Web Development (HTML, CSS, JavaScript)
-- 🌷 Python & Data Science
-- 🎨 UI/UX Design
-- 📷 Photography
-
+- 🖥️ Back-End Development (Python, Node.js, PHP)
+- 🗄️ Database & Data Management (MySQL, PostgreSQL)
+- 📊 Data Analytics & Visualization
+- 🔌 API Design & Development
+- 🛡️ Server & Network Security
 
 ---
 
