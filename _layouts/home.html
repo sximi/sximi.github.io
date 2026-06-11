@@ -15,7 +15,6 @@
       color: #4a1030;
     }
 
-    /* พื้นหลังลายจุด */
     body::before {
       content: '';
       position: fixed;
@@ -27,12 +26,8 @@
       z-index: 0;
     }
 
-    .wrap {
-      position: relative;
-      z-index: 1;
-    }
+    .wrap { position: relative; z-index: 1; }
 
-    /* Header */
     header {
       background: #e8557a;
       padding: 0.9rem 2rem;
@@ -60,7 +55,6 @@
       border-radius: 20px;
     }
 
-    /* ribbon แถบใต้ header */
     .ribbon {
       background: #f9a8be;
       text-align: center;
@@ -77,7 +71,6 @@
       padding: 0 1.5rem 4rem;
     }
 
-    /* Hero */
     .hero {
       background: white;
       border-radius: 28px;
@@ -103,7 +96,6 @@
       border: 4px solid #e8557a;
     }
 
-    /* หูกระต่าย My Melody */
     .ear-left, .ear-right {
       position: absolute;
       width: 30px; height: 42px;
@@ -149,7 +141,6 @@
       text-align: left;
     }
 
-    /* Cards */
     .card {
       background: white;
       border-radius: 20px;
@@ -180,12 +171,7 @@
       font-family: 'Mitr', sans-serif;
     }
 
-    p, li {
-      line-height: 1.9;
-      color: #6b2840;
-      font-size: 0.93rem;
-    }
-
+    p, li { line-height: 1.9; color: #6b2840; font-size: 0.93rem; }
     ul { padding-left: 1.3rem; }
     ul li { margin-bottom: 0.3rem; }
     ul li::marker { color: #e8557a; font-size: 1.1em; }
@@ -200,16 +186,10 @@
       font-family: 'Mitr', sans-serif;
       font-weight: 400;
     }
-
     th:first-child { border-radius: 10px 0 0 0; }
     th:last-child { border-radius: 0 10px 0 0; }
 
-    td {
-      padding: 9px 14px;
-      border-bottom: 1px solid #fce0ea;
-      color: #6b2840;
-    }
-
+    td { padding: 9px 14px; border-bottom: 1px solid #fce0ea; color: #6b2840; }
     tr:last-child td { border-bottom: none; }
     tr:nth-child(even) td { background: #fff5f8; }
 
@@ -236,9 +216,71 @@
       font-size: 0.93rem;
       color: #6b2840;
     }
-
     .contact-row a { color: #c0304a; text-decoration: none; }
     .contact-row a:hover { text-decoration: underline; }
+
+    /* keyword cards */
+    .kw-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 12px;
+      margin-top: 0.25rem;
+    }
+
+    .kw-card {
+      display: block;
+      text-decoration: none;
+      background: #fff0f5;
+      border: 1.5px solid #f9a8be;
+      border-radius: 16px;
+      padding: 1rem 1rem 2rem;
+      position: relative;
+      transition: transform 0.2s, box-shadow 0.2s;
+      box-shadow: 0 3px 0 #f4c0ce;
+    }
+
+    .kw-card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 6px 0 #f4c0ce;
+    }
+
+    .kw-num {
+      font-size: 10px;
+      font-weight: 500;
+      letter-spacing: .1em;
+      color: #f9a8be;
+      margin-bottom: 5px;
+    }
+
+    .kw-name {
+      font-family: 'Mitr', sans-serif;
+      font-size: 1rem;
+      color: #c0304a;
+      margin-bottom: 3px;
+    }
+
+    .kw-cat {
+      font-size: 0.76rem;
+      color: #d06080;
+    }
+
+    .kw-arrow {
+      position: absolute;
+      bottom: 10px;
+      right: 14px;
+      color: #f9a8be;
+      font-size: 16px;
+      transition: transform 0.2s;
+    }
+
+    .kw-card:hover .kw-arrow { transform: translateX(3px); }
+
+    .kw-note {
+      font-size: 0.8rem;
+      color: #d06080;
+      text-align: center;
+      margin-top: 0.8rem;
+    }
 
     footer {
       background: #e8557a;
@@ -297,6 +339,31 @@
         <tr><td>ปวส</td><td>วิทยาลัยเทคนิคสมุทรสาคร</td><td>2566–2567</td></tr>
         <tr><td>ปวช</td><td>วิทยาลัยเทคนิคสมุทรสาคร</td><td>2563–2565</td></tr>
       </table>
+    </div>
+
+    <div class="card">
+      <div class="section-title">🔑 คำสำคัญด้าน IT <span class="badge">Keywords</span></div>
+      <div class="kw-grid">
+        <a class="kw-card" href="https://sximi.github.io/webhook">
+          <div class="kw-num">01</div>
+          <div class="kw-name">Webhook</div>
+          <div class="kw-cat">Event-Driven HTTP</div>
+          <span class="kw-arrow">→</span>
+        </a>
+        <a class="kw-card" href="https://sximi.github.io/orm">
+          <div class="kw-num">02</div>
+          <div class="kw-name">ORM</div>
+          <div class="kw-cat">Database Mapping</div>
+          <span class="kw-arrow">→</span>
+        </a>
+        <a class="kw-card" href="https://sximi.github.io/rate-limiting">
+          <div class="kw-num">03</div>
+          <div class="kw-name">Rate Limiting</div>
+          <div class="kw-cat">Server Security</div>
+          <span class="kw-arrow">→</span>
+        </a>
+      </div>
+      <div class="kw-note">🌸 คลิกเพื่ออ่านรายละเอียดแต่ละคำ</div>
     </div>
 
     <div class="card">
